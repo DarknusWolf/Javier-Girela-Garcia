@@ -15,8 +15,7 @@ public class Generador : MonoBehaviour {
 	
 	
 	void Update () {
-	    if(siguiente_enemigo < Time.time)
-        {
+	    if(siguiente_enemigo < Time.time){
             Vector3 posicion = new Vector3(transform.position.x + Random.Range(minimo, maximo), transform.position.y, transform.position.z);
             siguiente_enemigo = Time.time + tiempo;
             Instantiate(enemigo, posicion, transform.rotation);
@@ -24,8 +23,7 @@ public class Generador : MonoBehaviour {
 	}
 
     // Para visualizar los limites en el editor
-    void OnDrawGizmosSelected()
-    {
+    void OnDrawGizmosSelected(){
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(new Vector3(transform.position.x+maximo, transform.position.y,transform.position.z), new Vector3(transform.position.x +minimo, transform.position.y, transform.position.z));
