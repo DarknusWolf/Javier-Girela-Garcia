@@ -2,9 +2,12 @@
 using System.Collections;
 
 public class Destructor_enemigos : MonoBehaviour {
+    
+    public int puntos_valor = 1;
+    private ControlaPuntos cp;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 	
 	}
 	
@@ -15,6 +18,8 @@ public class Destructor_enemigos : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D objeto){
         if (objeto.tag == "laser_jugador"){
+            //cp = objeto.gameObject.GetComponent<ControlaPuntos>();
+            //cp.suma_puntos(puntos_valor);
             Destroy(gameObject);
         }
 

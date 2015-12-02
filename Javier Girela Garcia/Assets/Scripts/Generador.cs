@@ -24,7 +24,6 @@ public class Generador : MonoBehaviour {
 
     // Para visualizar los limites en el editor
     void OnDrawGizmosSelected(){
-
         Gizmos.color = Color.yellow;
         Gizmos.DrawLine(new Vector3(transform.position.x+maximo, transform.position.y,transform.position.z), new Vector3(transform.position.x +minimo, transform.position.y, transform.position.z));
     }
