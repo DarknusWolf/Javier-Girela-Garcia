@@ -37,4 +37,10 @@ public class Nave_jugador : MonoBehaviour{
         }
 
     }
+
+    void OnTriggerEnter2D(Collider2D objeto){
+        if (objeto.tag == "enemigo"){
+            Destroy(gameObject);
+        }
+    }
 }

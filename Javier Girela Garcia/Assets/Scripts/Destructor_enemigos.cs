@@ -17,5 +17,13 @@ public class Destructor_enemigos : MonoBehaviour {
         if (objeto.tag == "laser_jugador"){
             Destroy(gameObject);
         }
+
+        if (objeto.tag == "destruir"){
+            Destroy(gameObject);
+        }
+
+        if (objeto.tag == "Player"){
+            Destroy(gameObject);
+        }
     }
 }
